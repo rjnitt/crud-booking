@@ -11,16 +11,15 @@ There are two modules in this application
         - POST `/v1/bfs/booking` endpoint defined to create the resource.
 - bookingservImplementation - This module contains the implementation for the rest endpoints.
     - `BookingResourceImpl.java` implements the `BookingResource` interface.
-
-
-#1. Solution:
-
-- created new spring boot service, using above inputs
-- BookingResource interface have 2 api's without modification of input/output
-- implement BookingResource with proper validation, idempotency, in-memory db, Error handling & response code!
-- implement strategy pattern for get list filter
-- added unit testing for failover & success case
-- exposed api for postman
+	
+	#1. Solution:
+	
+	- created new spring boot service, using above inputs
+	- BookingResource interface have 2 api's without modification of input/output
+	- implement BookingResource with proper validation, idempotency, in-memory db, Error handling & response code!
+	- implement strategy pattern for get list filter
+	- added unit testing for failover & success case
+	- exposed api for postman
 
 
 ## How to run the application
@@ -29,9 +28,9 @@ There are two modules in this application
 - Use command `mvn spring-boot:run` from `bookingservImplementation` folder to run the project.
 - Use postman or curl to access `http://localhost:8080/v1/bfs/booking` POST or GET endpoint.
 
-#2. Solution:
-- main application we can start service
-- Use postman or curl to access `http://localhost:8080/v1/bfs/booking` POST or GET endpoint.
+	#2. Solution:
+	- main application we can start service
+	- Use postman or curl to access `http://localhost:8080/v1/bfs/booking` POST or GET endpoint.
 
 
 ## Assignment
@@ -47,17 +46,17 @@ We would like you to enhance the existing project and see you complete the follo
 - Error handling in case of failures.
 - Implement idempotency logic to avoid duplicate resource creation.*
 
+	
+	#3. Solution:
+	
+	- Created new model for Booking, Address having all attributes
+	- BookingResource interface have 2 api's without modification of input/output
+	- implement BookingResource with proper validation
+	- handled idempotency, Error handling & response code!
+	- using in-memory db
+	- implement strategy pattern for get list filter for feasibility
+	- added unit testing for failover for  idempotency, Error handling & response code
+	- added unit testing success cases like multiple creation and filter based test cases added 
+	- exposed api for postman
 
-#3. Solution:
-
-- Created new model for Booking, Address having all attributes
-- BookingResource interface have 2 api's without modification of input/output
-- implement BookingResource with proper validation
-- handled idempotency, Error handling & response code!
-- using in-memory db
-- implement strategy pattern for get list filter for feasibility
-- added unit testing for failover for  idempotency, Error handling & response code
-- added unit testing success cases like multiple creation and filter based test cases added 
-- exposed api for postman
-
-
+Postman Collection Link: https://www.getpostman.com/collections/e13c6bfafa97ba85e22f
